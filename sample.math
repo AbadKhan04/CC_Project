@@ -1,6 +1,6 @@
 VAR num = 10
 VAR num1 = 50
-
+VAR num2 = 5
 ADD num num1
 WRITE num1
 
@@ -9,3 +9,13 @@ WRITE num1
 OR num num1
 XOR num num1
 NOT num1
+
+FACT num2
+WRITE num2
+
+IsPRIME num
+
+VAR num3 = 10
+WRITE num3
+VAR limit = 50
+PPRIME limit

@@ -31,7 +31,6 @@ SQUARE: Calculates the square of a number.
 WRITE: Outputs a value.
 READ: Takes user input.
 Bitwise Operator: 
-
 Factrization
 Prime Numbers
 

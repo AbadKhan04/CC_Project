@@ -39,6 +39,12 @@ class Parser:
                 self.parse_xor()
             elif token_type == "NOT":
                 self.parse_not()
+            elif token_type == "FACT":
+                self.parse_factorization()
+            elif token_type == "IsPRIME":
+                self.parse_is_prime()
+            elif token_type == "PPRIME":
+                self.parse_print_prime()
             elif token_type == "COMMENT":
                 self.advance()
             else:
@@ -212,3 +218,42 @@ class Parser:
         if num > 1:
             factors.append(num)
         return factors
+    
+    def parse_is_prime(self):
+        self.advance()  # Move past "ISPRIME"
+        var_name = self.current_token[1]
+        num = self.variables[var_name]
+        prime = self.is_prime(num)
+        if prime:
+            print("{} is prime".format(num))
+        else:
+            print("{} is not prime".format(num))
+        self.advance()
+
+    def is_prime(self, num):
+        if num <= 1:
+            return False
+        if num <= 3:
+            return True
+        if num % 2 == 0 or num % 3 == 0:
+            return False
+        i = 5
+        while i * i <= num:
+            if num % i == 0 or num % (i + 2) == 0:
+                return False
+            i += 6
+        return True
+    
+    def parse_print_prime(self):
+        self.advance()  # Move past "PRINTPRIME"
+        limit = int(self.current_token[1])
+        prime_numbers = self.get_prime_numbers(limit)
+        print("Prime numbers up to {}: {}".format(limit, prime_numbers))
+        self.advance()
+
+    def get_prime_numbers(self, limit):
+        prime_numbers = []
+        for num in range(2, limit + 1):
+            if self.is_prime(num):
+                prime_numbers.append(num)
+        return prime_numbers
