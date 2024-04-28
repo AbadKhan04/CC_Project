@@ -1,0 +1,83 @@
+# Variable Declaration
+VAR num = 10
+VAR num1 = 5
+
+# Mathematical Operations
+ADD num num1  # Add num and num1
+SUB num num1  # Subtract num1 from num
+MULTIPLY num num1  # Multiply num and num1
+DIVIDE num num1  # Divide num by num1
+SQUARE num  # Square num
+
+
+
+Now, let's implement a lexer and parser for our MathLang, and then we can write an interpreter to execute the operations.
+
+1) Lexer: The lexer will tokenize the input code.
+2) Parser: The parser will parse the tokens and create an abstract syntax tree (AST).
+3) Interpreter: The interpreter will traverse the AST and execute the operations. 
+
+
+Documentation:
+MyLang is a simple programming language designed to perform basic mathematical operations, variable manipulation, printing, input/output, conditional branching, and loops. It includes the following keywords and features:
+
+Keywords:
+VAR: Declares a variable.
+ADD: Performs addition.
+SUB: Performs subtraction.
+MULTIPLY: Performs multiplication.
+DIVIDE: Performs division.
+SQUARE: Calculates the square of a number.
+WRITE: Outputs a value.
+READ: Takes user input.
+Bitwise Operator: 
+
+Factrization
+Prime Numbers
+
+
+LOOP:                "LOOP num 5T" or "LOOP num 2-5"
+ENDLOOP:
+ONLYIF:
+ENDONLYIF:
+
+
+Operations:
+Mathematical operations: addition, subtraction, multiplication, division, square.
+Variable declaration and manipulation.
+Input and output operations.
+
+
+IF: Begins a conditional statement.
+ELSE: Branches the conditional statement.
+ENDIF: Ends a conditional statement.
+WHILE: Begins a loop.
+ENDWHILE: Ends a loop.
+Control Flow:
+Conditional statements (IF, ELSE, ENDIF) for branching.
+Looping statements (WHILE, ENDWHILE) for iteration.
+
+
+
+input num        # input from user and store it in num variable
+VAR num0 = 4
+VAR num1 = 5
+ADD num num1    # as in storing addition value in num1
+loop num1 5T     # 5T as loop 0 to 4 
+STOR num3       # Store loop value after 5 iterations
+WRITE num3    # write use instead of print and it print in as in python it do print(num3)
+
+IF num == num2
+WRITE(\Numbers are equal/)    # this one work as print("it print on terminal")
+ELSE 
+WRITE (\Numbers are not equal/) 
+
+
+
+VAR num = 10
+VAR num1 = 50
+ADD num num1    # 10 + 50 = 60
+WRITE num1      # 60
+SUB num1 num    # 60 - 10 = 50
+WRITE num       # 50
+WRITE num1      # 60
