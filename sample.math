@@ -18,4 +18,3 @@ IsPRIME num
 VAR num3 = 10
 WRITE num3
 VAR limit = 50
-PPRIME limit

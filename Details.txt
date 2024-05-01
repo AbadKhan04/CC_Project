@@ -23,54 +23,22 @@ MyLang is a simple programming language designed to perform basic mathematical o
 
 Keywords:
 VAR: Declares a variable.
-ADD: Performs addition.
-SUB: Performs subtraction.
-MULTIPLY: Performs multiplication.
+ADD: Performs addition.     # PLUS
+SUB: Performs subtraction.  # MINUS
+MULTIPLY: Performs multiplication.  
 DIVIDE: Performs division.
 SQUARE: Calculates the square of a number.
 WRITE: Outputs a value.
 READ: Takes user input.
-Bitwise Operator: 
+Bitwise Operator: AND OR NOT XOR
 Factrization
 Prime Numbers
-
-
-LOOP:                "LOOP num 5T" or "LOOP num 2-5"
-ENDLOOP:
-ONLYIF:
-ENDONLYIF:
 
 
 Operations:
 Mathematical operations: addition, subtraction, multiplication, division, square.
 Variable declaration and manipulation.
 Input and output operations.
-
-
-IF: Begins a conditional statement.
-ELSE: Branches the conditional statement.
-ENDIF: Ends a conditional statement.
-WHILE: Begins a loop.
-ENDWHILE: Ends a loop.
-Control Flow:
-Conditional statements (IF, ELSE, ENDIF) for branching.
-Looping statements (WHILE, ENDWHILE) for iteration.
-
-
-
-input num        # input from user and store it in num variable
-VAR num0 = 4
-VAR num1 = 5
-ADD num num1    # as in storing addition value in num1
-loop num1 5T     # 5T as loop 0 to 4 
-STOR num3       # Store loop value after 5 iterations
-WRITE num3    # write use instead of print and it print in as in python it do print(num3)
-
-IF num == num2
-WRITE(\Numbers are equal/)    # this one work as print("it print on terminal")
-ELSE 
-WRITE (\Numbers are not equal/) 
-
 
 
 VAR num = 10
@@ -80,3 +48,6 @@ WRITE num1      # 60
 SUB num1 num    # 60 - 10 = 50
 WRITE num       # 50
 WRITE num1      # 60
+
+
+Also Add Total lexer token in output as [('VAR', 'VAR'), ('=', '=')]= 2
