@@ -8,10 +8,7 @@ SUB num num1  # Subtract num1 from num
 MULTIPLY num num1  # Multiply num and num1
 DIVIDE num num1  # Divide num by num1
 SQUARE num  # Square num
-
-
-
-Now, let's implement a lexer and parser for our MathLang, and then we can write an interpreter to execute the operations.
+----------------------------------------------------------------------------------
 
 1) Lexer: The lexer will tokenize the input code.
 2) Parser: The parser will parse the tokens and create an abstract syntax tree (AST).
@@ -23,8 +20,8 @@ MyLang is a simple programming language designed to perform basic mathematical o
 
 Keywords:
 VAR: Declares a variable.
-ADD: Performs addition.     # PLUS
-SUB: Performs subtraction.  # MINUS
+ADD: Performs addition.    
+SUB: Performs subtraction.  
 MULTIPLY: Performs multiplication.  
 DIVIDE: Performs division.
 SQUARE: Calculates the square of a number.
@@ -39,8 +36,8 @@ Operations:
 Mathematical operations: addition, subtraction, multiplication, division, square.
 Variable declaration and manipulation.
 Input and output operations.
-
-
+Bitwise , Factrization, Prime print
+----------------------------------------------------------------------------------
 VAR num = 10
 VAR num1 = 50
 ADD num num1    # 10 + 50 = 60
@@ -49,5 +46,29 @@ SUB num1 num    # 60 - 10 = 50
 WRITE num       # 50
 WRITE num1      # 60
 
+----------------------------------------------------------------------------------
+VAR num = 10
+VAR num1 = 50
+VAR num2 = 5
+ADD num num1
+WRITE num1
+
+AND num num1
+WRITE num1
+OR num num1
+XOR num num1
+NOT num1
+
+FACT num2
+WRITE num2
+
+IsPRIME num
+
+VAR num3 = 10
+WRITE num3
+VAR limit = 50
+
+PPRIME 200
+----------------------------------------------------------------------------------
 
 Also Add Total lexer token in output as [('VAR', 'VAR'), ('=', '=')]= 2
