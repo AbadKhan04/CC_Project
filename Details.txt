@@ -3,8 +3,8 @@ VAR num = 10
 VAR num1 = 5
 
 # Mathematical Operations
-ADD num num1  # Add num and num1
-SUB num num1  # Subtract num1 from num
+PLUS num num1  # Add num and num1
+MINUS num num1  # Subtract num1 from num
 MULTIPLY num num1  # Multiply num and num1
 DIVIDE num num1  # Divide num by num1
 SQUARE num  # Square num
@@ -20,8 +20,8 @@ MyLang is a simple programming language designed to perform basic mathematical o
 
 Keywords:
 VAR: Declares a variable.
-ADD: Performs addition.    
-SUB: Performs subtraction.  
+PLUS: Performs addition.    
+MINUS: Performs subtraction.  
 MULTIPLY: Performs multiplication.  
 DIVIDE: Performs division.
 SQUARE: Calculates the square of a number.
@@ -40,9 +40,9 @@ Bitwise , Factrization, Prime print
 ----------------------------------------------------------------------------------
 VAR num = 10
 VAR num1 = 50
-ADD num num1    # 10 + 50 = 60
+PLUS num num1    # 10 + 50 = 60
 WRITE num1      # 60
-SUB num1 num    # 60 - 10 = 50
+MINUS num1 num    # 60 - 10 = 50
 WRITE num       # 50
 WRITE num1      # 60
 
@@ -50,7 +50,7 @@ WRITE num1      # 60
 VAR num = 10
 VAR num1 = 50
 VAR num2 = 5
-ADD num num1
+PLUS num num1
 WRITE num1
 
 AND num num1
@@ -71,4 +71,4 @@ VAR limit = 50
 PPRIME 200
 ----------------------------------------------------------------------------------
 
-Also Add Total lexer token in output as [('VAR', 'VAR'), ('=', '=')]= 2
+Also Add Total lexer token in output as [('VAR', 'VAR'), ('=', '=')]= 2 like how many lexer tokens are created

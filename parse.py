@@ -17,9 +17,9 @@ class Parser:
             token_type, value = self.tokens[self.peek_index]
             if token_type == "VAR":
                 self.parse_variable_declaration()
-            elif token_type == "ADD":
+            elif token_type == "PLUS":
                 self.parse_addition()
-            elif token_type == "SUB":
+            elif token_type == "MINUS":
                 self.parse_subtraction()
             elif token_type == "MULTIPLY":
                 self.parse_multiplication()
@@ -61,7 +61,7 @@ class Parser:
         self.advance()
 
     def parse_addition(self):
-        self.advance()  # Move past "ADD"
+        self.advance()  # Move past "PLUS"
         var1_name = self.current_token[1]
         var1 = self.variables[var1_name]
         self.advance()  # Move past first operand
@@ -74,7 +74,7 @@ class Parser:
         self.advance()
 
     def parse_subtraction(self):
-        self.advance()  # Move past "SUB"
+        self.advance()  # Move past "MINUS"
         var1_name = self.current_token[1]
         var1 = self.variables[var1_name]
         self.advance()  # Move past first operand

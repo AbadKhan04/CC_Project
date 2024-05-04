@@ -1,7 +1,7 @@
 VAR num = 10
 VAR num1 = 50
 VAR num2 = 5
-ADD num num1
+PLUS num num1
 WRITE num1
 
 AND num num1

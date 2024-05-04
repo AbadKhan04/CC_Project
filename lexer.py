@@ -2,8 +2,8 @@ import re
 
 token_patterns = [
     (r"VAR", "VAR"),
-    (r"ADD", "ADD"),
-    (r"SUB", "SUB"),
+    (r"PLUS", "PLUS"),
+    (r"MINUS", "MINUS"),
     (r"MULTIPLY", "MULTIPLY"),
     (r"DIVIDE", "DIVIDE"),
     (r"SQUARE", "SQUARE"),
