@@ -51,84 +51,78 @@ class Parser:
                 raise SyntaxError("Unexpected token: {}".format(value))
 
     def parse_variable_declaration(self):
-        self.advance()  # Move past "VAR"
+        self.advance() 
         variable_name = self.current_token[1]
-        self.advance()  # Move past identifier
-        self.advance()  # Move past "="
+        self.advance()  
+        self.advance() 
         value = int(self.current_token[1])
         self.variables[variable_name] = value
         #print("Variable '{}' declared with value {}".format(variable_name, value))
         self.advance()
 
     def parse_addition(self):
-        self.advance()  # Move past "PLUS"
+        self.advance()  
         var1_name = self.current_token[1]
         var1 = self.variables[var1_name]
-        self.advance()  # Move past first operand
+        self.advance() 
         var2_name = self.current_token[1]
         var2 = self.variables[var2_name]
         result = var1 + var2
         print("Addition: {} + {} = {}".format(var1, var2, result))
-        # Update the variable's value in the dictionary
         self.variables[var2_name] = result
         self.advance()
 
     def parse_subtraction(self):
-        self.advance()  # Move past "MINUS"
+        self.advance() 
         var1_name = self.current_token[1]
         var1 = self.variables[var1_name]
-        self.advance()  # Move past first operand
+        self.advance() 
         var2_name = self.current_token[1]
         var2 = self.variables[var2_name]
         result = var1 - var2
         #print("Subtraction: {} - {} = {}".format(var1, var2, result))
-        # Update the variable's value in the dictionary
         self.variables[var2_name] = result
         self.advance()
 
     def parse_multiplication(self):
-        self.advance()  # Move past "MULTIPLY"
+        self.advance() 
         var1_name = self.current_token[1]
         var1 = self.variables[var1_name]
-        self.advance()  # Move past first operand
+        self.advance() 
         var2_name = self.current_token[1]
         var2 = self.variables[var2_name]
         result = var1 * var2
         #print("Multiplication: {} * {} = {}".format(var1, var2, result))
-        # Update the variable's value in the dictionary
         self.variables[var2_name] = result
         self.advance()
 
     def parse_division(self):
-        self.advance()  # Move past "DIVIDE"
+        self.advance() 
         var1_name = self.current_token[1]
         var1 = self.variables[var1_name]
-        self.advance()  # Move past first operand
+        self.advance() 
         var2_name = self.current_token[1]
         var2 = self.variables[var2_name]
         result = var1 / var2
         #print("Division: {} / {} = {}".format(var1, var2, result))
-        # Update the variable's value in the dictionary
         self.variables[var2_name] = result
         self.advance()
 
     def parse_square(self):
-        self.advance()  # Move past "SQUARE"
+        self.advance() 
         var_name = self.current_token[1]
         var = self.variables[var_name]
         result = var ** 2
         #print("Square: {} * {} = {}".format(var, var, result))
-        # Update the variable's value in the dictionary
         self.variables[var_name] = result
         self.advance()
 
     def parse_write(self):
-        self.advance()  # Move past "WRITE"
+        self.advance() 
         token_type, value = self.current_token
         if token_type == "STRING":
-            print(value.strip('"'))  # Print the string without quotes
+            print(value.strip('"')) 
         elif token_type == "IDENTIFIER":
-            # If the token is an identifier, print the value of the variable
             var_name = value
             var_value = self.variables.get(var_name)
             if var_value is not None:
@@ -137,53 +131,47 @@ class Parser:
                 print("Undefined variable: {}".format(var_name))
         else:
             raise SyntaxError("Invalid token for WRITE: {}".format(value))
-        self.advance()  # Move to the next token
+        self.advance() 
 
     def parse_read(self):
-        self.advance()  # Move past "READ"
+        self.advance() 
         var_name = self.current_token[1]
         user_input = input()
         self.variables[var_name] = user_input
         self.advance()
     
     def parse_and(self):
-        self.advance()  # Move past "AND"
-        # Parse operands
+        self.advance() 
         var1_name = self.current_token[1]
         var1 = self.variables[var1_name]
-        self.advance()  # Move past first operand
+        self.advance() 
         var2_name = self.current_token[1]
         var2 = self.variables[var2_name]
         result = var1 & var2
-        # Update variable value
         self.variables[var2_name] = result
         print("AND Operation: {} | {} = {}".format(var1, var2, result))
         self.advance()
 
     def parse_or(self):
-        self.advance()  # Move past "OR"
-        # Parse operands
+        self.advance() 
         var1_name = self.current_token[1]
         var1 = self.variables[var1_name]
-        self.advance()  # Move past first operand
+        self.advance() 
         var2_name = self.current_token[1]
         var2 = self.variables[var2_name]
         result = var1 | var2
-        # Update variable value
         self.variables[var2_name] = result
         print("OR Operation: {} | {} = {}".format(var1, var2, result))
         self.advance()
 
     def parse_xor(self):
-        self.advance()  # Move past "XOR"
-        # Parse operands
+        self.advance() 
         var1_name = self.current_token[1]
         var1 = self.variables[var1_name]
-        self.advance()  # Move past first operand
+        self.advance() 
         var2_name = self.current_token[1]
         var2 = self.variables[var2_name]
         result = var1 ^ var2
-        # Update variable value
         self.variables[var2_name] = result
         print("XOR Operation: {} | {} = {}".format(var1, var2, result))
         self.advance()

@@ -1,11 +1,13 @@
 VAR num = 10
-VAR num1 = 50
-VAR num2 = 5
+VAR num1 = 62
+VAR num2 = 15
+
 PLUS num num1
 WRITE num1
 
 AND num num1
 WRITE num1
+
 OR num num1
 XOR num num1
 NOT num1
@@ -17,6 +19,5 @@ IsPRIME num
 
 VAR num3 = 10
 WRITE num3
-VAR limit = 50
 
 PPRIME 200

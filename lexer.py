@@ -36,7 +36,7 @@ token_patterns = [
     (r":", ":"),
     (r",", ","),
     (r"#.*", "COMMENT"),
-    (r"\s+", None),  # Ignore whitespace
+    (r"\s+", None),
 ]
 
 def lex(code):
